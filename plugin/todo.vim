@@ -28,3 +28,7 @@ ENDPYTHON
 endfunction
 
 command! SortTodo :call SortTodo()
+
+"augroup vimtodo
+"  au BufWritePre TODO.txt SortTodo
+"augroup END
