@@ -14,7 +14,7 @@ syn region todotxtDone start="^x " end="$"
 hi todotxtPri1 term=bold ctermfg=red guifg=#ff0000 gui=bold
 hi todotxtPri2 term=bold ctermfg=yellow guifg=#ffb000 gui=bold
 hi todotxtPri3 ctermfg=green guifg=#00c000
-hi def link todotxtDone Comment
+hi todotxtDone ctermfg=gray guifg=#c0c0c0
 hi todotxtProject ctermfg=blue guifg=#0000ff
 hi todotxtContext ctermfg=magenta guifg=#ff00ff
 hi def link todotxtDate Constant
