@@ -8,3 +8,7 @@ Unpack/clone to ``~/.vim`` or ``~/.vim/bundle`` if you have pathogen.
 License
 -------
 Public domain.
+
+Commands
+--------
+:SortTodo
