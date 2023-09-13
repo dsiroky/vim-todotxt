@@ -1,7 +1,7 @@
 Todo.txt format for Vim
 =======================
 
-Currently only syntax highlight is supported. No extra functionality.
+Currently only syntax highlight is supported. No extra functionality except for SortTodo command.
 
 Unpack/clone to ``~/.vim`` or ``~/.vim/bundle`` if you have pathogen.
 
@@ -11,4 +11,5 @@ Public domain.
 
 Commands
 --------
-:SortTodo
+:SortTodo  
+   Sort tasks by priority

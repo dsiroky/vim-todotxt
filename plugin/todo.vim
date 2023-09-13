@@ -2,8 +2,12 @@ if exists("g:loaded_todo")
   finish
 endif
 let g:loaded_todo = 1
+" This syntax conflicts with Rainbow Parentheses Improved. We need to
+" disable it
+au BufRead * RainbowToggleOff
 
-python << ENDPYTHON
+
+python3 << ENDPYTHON
 
 import vim
 
@@ -12,17 +16,17 @@ def cmp_todo(l1, l2):
         return 1
     if l2.startswith("x "):
         return -1
-    return cmp(l1, l2)
+    return (l1 > l2) - (l1 < l2)
 
 def sort_todo():
     lines = list(vim.current.buffer)
-    lines.sort(cmp=cmp_todo)
+    lines.sort(key=lambda x: x, reverse=False)
     vim.current.buffer[:] = lines
 
 ENDPYTHON
 
 function! SortTodo()
-python << ENDPYTHON
+python3 << ENDPYTHON
 sort_todo()
 ENDPYTHON
 endfunction
